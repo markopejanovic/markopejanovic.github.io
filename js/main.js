@@ -1,4 +1,4 @@
-//quotes
+// Quotes
 var quotes = [
     ["Stay Hungry. Stay Foolish", "Steve Jobs"],
     ["Good Artists Copy, Great Artists Steal.", "Pablo Picasso"],
@@ -7,26 +7,41 @@ var quotes = [
     ["Simplicity is the ultimate sophistication.", "Leonardo Da Vinci"]
 ];
 
-// Grabbing the elements
-var i = 0;
-var quote = document.getElementById('quote');
-var author = document.getElementById('author');
+// Random
+var random = Math.floor(Math.random() * 5);
+var author = document.querySelector("#author");
+var quote = document.querySelector("#quote");
 
-// next
-function increment() {
+// Get
+quote.innerHTML = quotes[random][0];
+author.innerHTML = quotes[random][1];
 
-    quote.innerHTML = quotes[i][0];
-    author.innerHTML = quotes[i][1];
-    i++;
-    if (i > 4) {
-        i = 0;
-    }
-    quote.style.opacity = "0";
-    author.style.opacity = "0";
-}
+document.getElementById("lorem").addEventListener("click", function () {
+    var random = Math.floor(Math.random() * 5);
+    quote.innerHTML = quotes[random][0];
+    author.innerHTML = quotes[random][1];
+});
 
-setInterval(increment, 2000); 
-
+document.getElementById("home").addEventListener("click", function () {
+    var random = Math.floor(Math.random() * 5);
+    quote.innerHTML = quotes[random][0];
+    author.innerHTML = quotes[random][1];
+});
+document.getElementById("boxes").addEventListener("click", function () {
+    var random = Math.floor(Math.random() * 5);
+    quote.innerHTML = quotes[random][0];
+    author.innerHTML = quotes[random][1];
+});
+document.getElementById("gallery").addEventListener("click", function () {
+    var random = Math.floor(Math.random() * 5);
+    quote.innerHTML = quotes[random][0];
+    author.innerHTML = quotes[random][1];
+});
+document.getElementById("about").addEventListener("click", function () {
+    var random = Math.floor(Math.random() * 5);
+    quote.innerHTML = quotes[random][0];
+    author.innerHTML = quotes[random][1];
+});
 
 
 
